@@ -11,6 +11,7 @@ const showMatch = async ({
         try {
             const browser = await puppeteer.launch({
                 headless: false,
+                args: ['--no-sandbox'],
                 slowMo: 100
             })
             const page = await browser.newPage()
