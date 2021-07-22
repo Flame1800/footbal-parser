@@ -9,7 +9,7 @@ const startBot = () => {
     bot.setMyCommands([
         {command: '/info', description: 'Информация о боте'},
         {command: '/play', description: 'Запуск парсера'},
-        {command: '/off', description: 'Отключение парсера'},
+        {command: '/stop', description: 'Отключение парсера'},
     ])
 
     bot.on('message', async msg => {
@@ -17,19 +17,26 @@ const startBot = () => {
         const chatId = msg.chat.id
 
         if  (text === '/start') {
-            return bot.sendMessage(chatId, 'Добро пожаловать! Я бот парсер который собирает данные о футбольных матчах и перед завершениям отобранных матчей присылает выгодные, на которые можно поставить, что бы начать набери "/play", и "/off" что бы отключить.')
+            return bot.sendMessage(chatId, 'Добро пожаловать! Я бот парсер который собирает данные о футбольных матчах и перед завершениям отобранных матчей присылает выгодные, на которые можно поставить, что бы начать набери "/play", и "/stop" что бы отключить.')
         }
 
         if  (text === '/info') {
-            return bot.sendMessage(chatId, 'Я бот парсер который собирает данные о футбольных матчах и перед завершениям отобранных матчей присылает выгодные, на которые можно поставить, что бы начать набери "/play", и "/off" что бы отключить.')
+            return bot.sendMessage(chatId, 'Я бот парсер который собирает данные о футбольных матчах и перед завершениям отобранных матчей присылает выгодные, на которые можно поставить, что бы начать набери "/play", и "/stop" что бы отключить.')
         }
 
-        if (text === '/play') {
+        if (text === '/play' || text === '/stop') {
+            if (text === '/play') {
                 await bot.sendMessage(chatId, 'Парсер запущен, поиск...')
-                return parserFind({ bot, chatId })
+                return parserFind({bot,chatId})
+            }
+            if (text === '/stop') {
+                await bot.sendMessage(chatId, 'Остановка. Парсер прекратил поиск.')
+                process.exit()
+                return null
+            }
         }
 
-        return bot.sendMessage(chatId, 'Я вас не понял, попробуйте еще раз!)') 
+        return bot.sendMessage(chatId, 'Я вас не понял, попробуйте еще раз!)')
     })
 }
 

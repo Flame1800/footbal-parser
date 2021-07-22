@@ -12,7 +12,7 @@ const parseMatch = async ({
 }) => {
     try {
         const browser = await puppeteer.launch({
-            headless: false,
+            headless: true,
             slowMo: 100,
             devtools: true
         })
@@ -95,26 +95,16 @@ const parseMatch = async ({
             })
 
             const matchTime = new Date(liveMatch.startTime)
-            const now = new Date()
             const time = {
-                hours: (matchTime.getHours() + 5) - now.getHours(),
-                minutes: matchTime.getMinutes() - now.getMinutes()
+                hours: (matchTime.getHours() + 5),
+                minutes: matchTime.getMinutes()
             }
 
-            if (time.minutes < 0) {
-                time.minutes = 60 - (time.minutes * -1) 
-                time.hours -= 1
-            }
-
-
-            if (time.hours >= 0) {
-                console.log(`${time.hours}:${time.minutes}`, liveMatch.redValues, link)
-                matchValues.push({
-                    link,
-                    time,
-                    values: liveMatch.redValues
-                })
-            }
+            matchValues.push({
+                link,
+                time,
+                values: liveMatch.redValues
+            })
         }
 
         const profitMatches = matchValues.filter(({
