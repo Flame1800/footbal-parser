@@ -13,8 +13,7 @@ const parseMatch = async ({
     try {
         const browser = await puppeteer.launch({
             headless: true,
-            slowMo: 100,
-            devtools: true
+            slowMo: 100
         })
         const page = await browser.newPage()
 
@@ -49,7 +48,8 @@ const parseMatch = async ({
 
         const matchValues = []
 
-        for (let i = 0; i < filteredList.length; i++) {
+        const legrhArr = filteredList.length
+        for (let i = 0; i < 10; i++) {
             const link = `${matchLiveLink}${filteredList[i].id}`
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
@@ -79,10 +79,10 @@ const parseMatch = async ({
                     }
                 })
 
-                const nededValues = currStats.slice(0, 4)
+                const neededValues = currStats.slice(0, 4)
                 const redValues = []
 
-                nededValues.forEach(item => {
+                neededValues.forEach(item => {
                     if (item.classList.contains('red')) {
                         redValues.push(item.innerText)
                     }

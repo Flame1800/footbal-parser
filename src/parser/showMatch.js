@@ -7,8 +7,8 @@ const showMatch = async ({
 }) => {
     const now = new Date()
     const time = {
-        hours: match.time - now.getHours(),
-        minutes: match.time- now.getMinutes()
+        hours: match.time.hours - now.getHours(),
+        minutes: match.time.minutes - now.getMinutes()
     }
 
     if (time.minutes < 0) {
@@ -16,11 +16,14 @@ const showMatch = async ({
         time.hours -= 1
     }
     const miliseconds = (time.hours * 60 * 60 * 1000) + (time.minutes * 60 * 1000)
-    if (time.hours >= 0) {
+    const triggerTime = 70 * 60 * 1000
+    console.log(match.link, match.time, miliseconds, triggerTime)
+
+    if (miliseconds >= 0) {
         setTimeout(async () => {
             try {
                 const browser = await puppeteer.launch({
-                    headless: true,
+                    headless: false,
                     slowMo: 100
                 })
                 const page = await browser.newPage()
@@ -63,12 +66,12 @@ const showMatch = async ({
                 if (result.isProfit) {
                     await bot.sendMessage(chatId, `Ссылка: ${result.match.link}, ударов в створ: ${result.scores} `)
                 } else {
-                    await bot.sendMessage(chatId, `!Неудачный матч! Ссылка: ${result.match.link}, ударов в створ: ${result.scores.length} `)
+                    await bot.sendMessage(chatId, `!Неудачный матч! Ссылка: ${result.match.link}, ударов в створ: ${result.scores.length} (для теста)`)
                 }
             } catch (error) {
                 console.log(error)
             }
-        }, miliseconds + 70 * 60 * 1000)
+        }, miliseconds + triggerTime)
     }
 }
 

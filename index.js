@@ -1,5 +1,6 @@
 const TelegrammApi = require('node-telegram-bot-api')
 const parserFind = require('./src/parser/findMatchs')
+const parserShow = require('./src/parser/showMatch')
 
 const token = '1883374056:AAHyjFm_cGVjfPzfmUhbQeO8TdEbfEjwFLE'
 
@@ -28,6 +29,8 @@ const startBot = () => {
             if (text === '/play') {
                 await bot.sendMessage(chatId, 'Парсер запущен, поиск...')
                 return parserFind({bot,chatId})
+                // const match = {"link":"https://www.nowgoal3.com/match/live-2067649","time":{"hours":1,"minutes":3},"values":["28","31","30"]}
+                // return parserShow({bot, chatId, match})
             }
             if (text === '/stop') {
                 await bot.sendMessage(chatId, 'Остановка. Парсер прекратил поиск.')
