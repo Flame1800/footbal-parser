@@ -32,11 +32,11 @@ const startBot = () => {
                 // const match = {"link":"https://www.nowgoal3.com/match/live-2067649","time":{"hours":1,"minutes":3},"values":["28","31","30"]}
                 // return parserShow({bot, chatId, match})
             }
-            if (text === '/stop') {
-                await bot.sendMessage(chatId, 'Остановка. Парсер прекратил поиск.')
-                process.exit()
-                return null
-            }
+            // if (text === '/stop') {
+            //     await bot.sendMessage(chatId, 'Остановка. Парсер прекратил поиск.')
+            //     process.exit()
+            //     return null
+            // }
         }
 
         return bot.sendMessage(chatId, 'Я вас не понял, попробуйте еще раз!)')
