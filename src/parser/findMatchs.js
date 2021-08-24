@@ -7,9 +7,9 @@ const link = 'https://www.nowgoal3.com'
 const matchLiveLink = 'https://www.nowgoal3.com/match/live-'
 
 const parseMatch = async ({
-                              bot,
-                              chatId
-                          }) => {
+    bot,
+    chatId
+}) => {
     try {
         const browser = await puppeteer.launch({
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -44,13 +44,13 @@ const parseMatch = async ({
         })
 
         const filteredList = html.filter(({
-                                              count
-                                          }) => count === '-')
+            count
+        }) => count === '-')
 
         const matchValues = []
 
         const legrhArr = filteredList.length
-        for (let i = 0; i < legrhArr; i++) {
+        for (let i = 0; i < 30; i++) {
             const link = `${matchLiveLink}${filteredList[i].id}`
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
@@ -97,7 +97,7 @@ const parseMatch = async ({
 
             const matchTime = new Date(liveMatch.startTime)
             const time = {
-                hours: (matchTime.getHours() + 3),
+                hours: (matchTime.getHours() + 5),
                 minutes: matchTime.getMinutes()
             }
 
@@ -109,8 +109,8 @@ const parseMatch = async ({
         }
 
         const profitMatches = matchValues.filter(({
-                                                      values
-                                                  }) => values.length >= 3)
+            values
+        }) => values.length >= 3)
 
 
 
@@ -140,9 +140,9 @@ const parseMatch = async ({
 }
 
 module.exports = ({
-                      bot,
-                      chatId
-                  }) => {
+    bot,
+    chatId
+}) => {
     parseMatch({
         bot,
         chatId

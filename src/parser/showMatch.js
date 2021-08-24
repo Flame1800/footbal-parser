@@ -16,11 +16,16 @@ const showMatch = async ({
         time.hours -= 1
     }
     const miliseconds = (time.hours * 60 * 60 * 1000) + (time.minutes * 60 * 1000)
-    const triggerTime = 70 * 60 * 1000
-    console.log(match.link, match.time, miliseconds, triggerTime)
+    // const triggerTime = 70 * 60 * 1000
+    const triggerTime = 10000
+
+    await bot.sendMessage(chatId, `Ссылка: ${match.link}, Через: ${time.hours} часов и ${time.minutes} минут начнется матч`)
+
+    console.log(miliseconds, triggerTime)
 
     if (miliseconds >= 0) {
         setTimeout(async () => {
+            console.log(`Матч ${match.link} в процессе обработки`)
             try {
                 const browser = await puppeteer.launch({
                     args: ['--no-sandbox', '--disable-setuid-sandbox'],
