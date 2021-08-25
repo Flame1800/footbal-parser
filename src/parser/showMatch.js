@@ -16,12 +16,7 @@ const showMatch = async ({
         time.hours -= 1
     }
     const miliseconds = (time.hours * 60 * 60 * 1000) + (time.minutes * 60 * 1000)
-    // const triggerTime = 70 * 60 * 1000
-    const triggerTime = 10000
-
-    await bot.sendMessage(chatId, `Ссылка: ${match.link}, Через: ${time.hours} часов и ${time.minutes} минут начнется матч`)
-
-    console.log(miliseconds, triggerTime)
+    const triggerTime = 70 * 60 * 1000
 
     if (miliseconds >= 0) {
         setTimeout(async () => {
@@ -80,7 +75,7 @@ const showMatch = async ({
             } catch (error) {
                 console.log(error) 
             }
-        }, miliseconds + triggerTime)
+        }, 10000)
     }
 }
 
