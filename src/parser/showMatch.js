@@ -34,6 +34,9 @@ const showMatch = async ({
                 })
                 const page = await browser.newPage()
 
+                page.setDefaultNavigationTimeout(0)
+
+
                 await page.setViewport({
                     width: 1400,
                     height: 900
