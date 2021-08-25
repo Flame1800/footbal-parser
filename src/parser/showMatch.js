@@ -75,7 +75,7 @@ const showMatch = async ({
             } catch (error) {
                 console.log(error) 
             }
-        }, 10000)
+        }, miliseconds + triggerTime)
     }
 }
 
