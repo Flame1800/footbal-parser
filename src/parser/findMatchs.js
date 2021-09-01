@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer')
 const fs = require('fs')
 const showMatch = require('./showMatch')
-const moment = require('moment')
 
 const link = 'https://www.nowgoal3.com'
 const matchLiveLink = 'https://www.nowgoal3.com/match/live-'
@@ -13,7 +12,7 @@ const parseMatch = async ({
     try {
         const browser = await puppeteer.launch({
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
-            headless: true,
+            headless: false,
             slowMo: 100
         })
         const page = await browser.newPage()
@@ -101,8 +100,11 @@ const parseMatch = async ({
             const matchTime = new Date(liveMatch.startTime)
             const time = {
                 hours: (matchTime.getHours() + 5),
-                minutes: matchTime.getMinutes()
+                minutes: matchTime.getMinutes(),
+                date: matchTime
             }
+
+            time.string = `${time.hours}:${time.minutes}`
 
             matchValues.push({
                 link,
@@ -116,17 +118,25 @@ const parseMatch = async ({
         }) => values.length >= 3)
 
 
+        const complectProfitMatches = profitMatches.reduce((acc, current) => {
+            const property = current.time.string
+            acc[property] = acc[property] || []
+            acc[property].push(current)
+            return acc
+        }, {})
 
-        fs.writeFile('matchList.json', JSON.stringify(profitMatches), (e) => {
+        const sortedComplectMatches = Object.values(complectProfitMatches).sort((a,b) => new Date(a.date) - new Date(b.date))
+ 
+        fs.writeFile('matchList.json', JSON.stringify(sortedComplectMatches), (e) => {
             if (e) throw e
         })
 
         if (profitMatches.length > 0) {
             await bot.sendMessage(chatId, `Найдено ${profitMatches.length} выгодных матчей, ждите ссылки, на самые выигрышные матчи`)
 
-            profitMatches.forEach((item) => {
+            sortedComplectMatches.forEach((item) => {
                 showMatch({
-                    match: item,
+                    matchs: item,
                     bot,
                     chatId
                 })
