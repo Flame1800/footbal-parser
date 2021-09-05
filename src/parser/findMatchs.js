@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 const fs = require('fs')
-const showMatch = require('./showMatch')
+const showMatch = require('./showMatchLite')
 
 const link = 'https://www.nowgoal3.com'
 const matchLiveLink = 'https://www.nowgoal3.com/match/live-'
@@ -52,7 +52,7 @@ const parseMatch = async ({
         const matchValues = []
 
         const legrhArr = filteredList.length
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < legrhArr; i++) {
             const link = `${matchLiveLink}${filteredList[i].id}`
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
