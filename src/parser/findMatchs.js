@@ -12,7 +12,7 @@ const parseMatch = async ({
     try {
         const browser = await puppeteer.launch({
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
-            headless: false,
+            headless: true,
             slowMo: 100
         })
         const page = await browser.newPage()
@@ -52,7 +52,7 @@ const parseMatch = async ({
         const matchValues = []
 
         const legrhArr = filteredList.length
-        for (let i = 0; i < legrhArr; i++) {
+        for (let i = 0; i < 50; i++) {
             const link = `${matchLiveLink}${filteredList[i].id}`
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
