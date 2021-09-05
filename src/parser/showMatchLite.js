@@ -21,7 +21,7 @@ const showMatch = async ({
     if (miliseconds >= 0) {
         setTimeout(() => {
             matchs.forEach(async currMatch => {
-                await bot.sendMessage(chatId, `Матч подходит к концу! Ссылка: ${currMatch}`)
+                await bot.sendMessage(chatId, `Матч подходит к концу! Ссылка: ${currMatch.link}`)
             })
         }, miliseconds + triggerTime)
     }
