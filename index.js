@@ -25,6 +25,10 @@ const startBot = () => {
             return bot.sendMessage(chatId, 'Я бот парсер который собирает данные о футбольных матчах и перед завершениям отобранных матчей присылает выгодные, на которые можно поставить, что бы начать набери "/play", и "/stop" что бы отключить.')
         }
 
+        if (text === '/time') {
+            return bot.sendMessage(chatId, `Текущаяя дата: ${new Date}`)
+        }
+
         if (text === '/play' || text === '/stop') {
             if (text === '/play') {
                 await bot.sendMessage(chatId, 'Парсер запущен, поиск...')
