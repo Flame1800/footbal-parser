@@ -57,7 +57,7 @@ const parseMatch = async ({
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
             })
-            await page.waitForSelector('span[name=timeData]').catch(e => console.log(e))
+            // await page.waitForSelector('#').catch(e => console.log(e))
             console.log(i)
 
             const liveMatch = await page.evaluate(async () => {
