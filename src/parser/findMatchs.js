@@ -17,9 +17,6 @@ const parseMatch = async ({
         })
         const page = await browser.newPage()
 
-        page.setDefaultNavigationTimeout(0)
-
-
         await page.setViewport({
             width: 1400,
             height: 900
@@ -39,7 +36,7 @@ const parseMatch = async ({
 
                 list.push({
                     count,
-                    id
+                    id: id.substring(0, 7)  
                 })
             })
             return list
@@ -57,13 +54,13 @@ const parseMatch = async ({
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
             })
-            // await page.waitForSelector('#').catch(e => console.log(e))
+            await page.waitForSelector('#match_time').catch(e => console.log(e))
             console.log(i)
 
             const liveMatch = await page.evaluate(async () => {
                 const startTime = document.querySelector('#match_time')?.getAttribute('data-t') || new Date()
 
-                const comparisions = document.querySelectorAll('.fx-comparision')
+                 const comparisions = document.querySelectorAll('.fx-comparision')
                 let currStats = []
                 comparisions.forEach(comparision => {
                     const minute = comparision.querySelector('span.fx-c-3').querySelector('span').innerText
