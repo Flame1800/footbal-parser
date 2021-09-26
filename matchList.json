@@ -1,1 +1,355 @@
-[[{"link":"https://www.nowgoal3.com/match/live-2094825","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["25","20","23"]},{"link":"https://www.nowgoal3.com/match/live-2103194","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["22","26","28","26"]},{"link":"https://www.nowgoal3.com/match/live-2035977","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["25","26","27"]},{"link":"https://www.nowgoal3.com/match/live-2095136","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["22","35","30","23"]},{"link":"https://www.nowgoal3.com/match/live-2063877","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["34","25","18"]},{"link":"https://www.nowgoal3.com/match/live-2094829","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["24","30","28"]},{"link":"https://www.nowgoal3.com/match/live-2095128","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["23","33","29"]},{"link":"https://www.nowgoal3.com/match/live-2103185","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["29","21","25"]},{"link":"https://www.nowgoal3.com/match/live-1989303","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["24","30","37"]},{"link":"https://www.nowgoal3.com/match/live-2063874","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["21","23","28"]},{"link":"https://www.nowgoal3.com/match/live-2063966","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["23","26","19"]},{"link":"https://www.nowgoal3.com/match/live-2074649","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["19","29","27"]},{"link":"https://www.nowgoal3.com/match/live-2103184","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["31","27","27"]},{"link":"https://www.nowgoal3.com/match/live-2065489","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["21","27","22"]},{"link":"https://www.nowgoal3.com/match/live-2103158","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["23","24","21"]},{"link":"https://www.nowgoal3.com/match/live-2088059","time":{"hours":null,"minutes":null,"date":null,"string":"NaN:NaN"},"values":["30","25","24","21"]}],[{"link":"https://www.nowgoal3.com/match/live-2103172","time":{"hours":13,"minutes":45,"date":"2021-09-24T03:45:00.000Z","string":"13:45"},"values":["32","26","27"]}],[{"link":"https://www.nowgoal3.com/match/live-2074653","time":{"hours":15,"minutes":0,"date":"2021-09-24T05:00:00.000Z","string":"15:0"},"values":["30","30","24"]}],[{"link":"https://www.nowgoal3.com/match/live-2095135","time":{"hours":15,"minutes":15,"date":"2021-09-24T05:15:00.000Z","string":"15:15"},"values":["23","32","28"]}],[{"link":"https://www.nowgoal3.com/match/live-2103161","time":{"hours":15,"minutes":45,"date":"2021-09-24T05:45:00.000Z","string":"15:45"},"values":["33","42","23"]}]]
+[
+    [
+        {
+            "link": "https://www.nowgoal3.com/match/live-2049778",
+            "time": {
+                "hours": 13,
+                "minutes": 15,
+                "date": "2021-09-26T08:11:20.014Z",
+                "string": "13:15"
+            },
+            "values": [
+                "26",
+                "23",
+                "26"
+            ]
+        }
+    ],
+    [
+        {
+            "link": "https://www.nowgoal3.com/match/live-2041868",
+            "time": {
+                "hours": 13,
+                "minutes": 30,
+                "date": "2021-09-26T08:11:25.620Z",
+                "string": "13:30"
+            },
+            "values": [
+                "28",
+                "20",
+                "24"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2093159",
+            "time": {
+                "hours": 13,
+                "minutes": 30,
+                "date": "2021-09-26T08:11:36.409Z",
+                "string": "13:30"
+            },
+            "values": [
+                "36",
+                "26",
+                "30"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2049782",
+            "time": {
+                "hours": 13,
+                "minutes": 30,
+                "date": "2021-09-26T08:11:47.946Z",
+                "string": "13:30"
+            },
+            "values": [
+                "24",
+                "32",
+                "24"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2059722",
+            "time": {
+                "hours": 13,
+                "minutes": 30,
+                "date": "2021-09-26T08:11:55.360Z",
+                "string": "13:30"
+            },
+            "values": [
+                "23",
+                "29",
+                "25"
+            ]
+        }
+    ],
+    [
+        {
+            "link": "https://www.nowgoal3.com/match/live-2084138",
+            "time": {
+                "hours": 13,
+                "minutes": 45,
+                "date": "2021-09-26T08:12:07.689Z",
+                "string": "13:45"
+            },
+            "values": [
+                "23",
+                "29",
+                "25"
+            ]
+        }
+    ],
+    [
+        {
+            "link": "https://www.nowgoal3.com/match/live-2063164",
+            "time": {
+                "hours": 14,
+                "minutes": 0,
+                "date": "2021-09-26T08:12:54.469Z",
+                "string": "14:0"
+            },
+            "values": [
+                "75",
+                "27",
+                "33",
+                "18"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2063374",
+            "time": {
+                "hours": 14,
+                "minutes": 0,
+                "date": "2021-09-26T08:13:18.027Z",
+                "string": "14:0"
+            },
+            "values": [
+                "30",
+                "21",
+                "21"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2099238",
+            "time": {
+                "hours": 14,
+                "minutes": 0,
+                "date": "2021-09-26T08:13:30.077Z",
+                "string": "14:0"
+            },
+            "values": [
+                "25",
+                "29",
+                "26"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2104190",
+            "time": {
+                "hours": 14,
+                "minutes": 0,
+                "date": "2021-09-26T08:13:38.043Z",
+                "string": "14:0"
+            },
+            "values": [
+                "30",
+                "25",
+                "25"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2077909",
+            "time": {
+                "hours": 14,
+                "minutes": 0,
+                "date": "2021-09-26T08:13:50.660Z",
+                "string": "14:0"
+            },
+            "values": [
+                "22",
+                "21",
+                "22",
+                "21"
+            ]
+        }
+    ],
+    [
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072009",
+            "time": {
+                "hours": 14,
+                "minutes": 30,
+                "date": "2021-09-26T08:13:55.995Z",
+                "string": "14:30"
+            },
+            "values": [
+                "23",
+                "23",
+                "42"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2074872",
+            "time": {
+                "hours": 14,
+                "minutes": 30,
+                "date": "2021-09-26T08:14:01.740Z",
+                "string": "14:30"
+            },
+            "values": [
+                "28",
+                "34",
+                "33"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-1987998",
+            "time": {
+                "hours": 14,
+                "minutes": 30,
+                "date": "2021-09-26T08:14:09.237Z",
+                "string": "14:30"
+            },
+            "values": [
+                "27",
+                "30",
+                "24"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-1987999",
+            "time": {
+                "hours": 14,
+                "minutes": 30,
+                "date": "2021-09-26T08:14:16.121Z",
+                "string": "14:30"
+            },
+            "values": [
+                "23",
+                "36",
+                "22"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-1973215",
+            "time": {
+                "hours": 14,
+                "minutes": 30,
+                "date": "2021-09-26T08:14:21.281Z",
+                "string": "14:30"
+            },
+            "values": [
+                "29",
+                "26",
+                "32"
+            ]
+        }
+    ],
+    [
+        {
+            "link": "https://www.nowgoal3.com/match/live-1969539",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:14:47.728Z",
+                "string": "15:0"
+            },
+            "values": [
+                "32",
+                "32",
+                "35"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072006",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:15:29.568Z",
+                "string": "15:0"
+            },
+            "values": [
+                "27",
+                "25",
+                "33"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072012",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:15:34.641Z",
+                "string": "15:0"
+            },
+            "values": [
+                "30",
+                "26",
+                "34"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072317",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:15:40.214Z",
+                "string": "15:0"
+            },
+            "values": [
+                "27",
+                "23",
+                "23",
+                "28"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072616",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:15:45.984Z",
+                "string": "15:0"
+            },
+            "values": [
+                "37",
+                "30",
+                "20"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072618",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:15:55.317Z",
+                "string": "15:0"
+            },
+            "values": [
+                "31",
+                "40",
+                "26",
+                "22"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072622",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:16:18.520Z",
+                "string": "15:0"
+            },
+            "values": [
+                "25",
+                "32",
+                "41",
+                "29"
+            ]
+        },
+        {
+            "link": "https://www.nowgoal3.com/match/live-2072623",
+            "time": {
+                "hours": 15,
+                "minutes": 0,
+                "date": "2021-09-26T08:16:25.151Z",
+                "string": "15:0"
+            },
+            "values": [
+                "27",
+                "30",
+                "33"
+            ]
+        }
+    ]
+]

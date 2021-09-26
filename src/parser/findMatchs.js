@@ -49,12 +49,12 @@ const parseMatch = async ({
         const matchValues = []
 
         const legrhArr = filteredList.length
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < legrhArr; i++) {
             const link = `${matchLiveLink}${filteredList[i].id}`
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
             })
-            await page.waitForSelector('#match_time').catch(e => console.log(e))
+            await page.waitForSelector('span[name=timeData]').catch(e => console.log(e))
             console.log(i)
 
             const liveMatch = await page.evaluate(async () => {
@@ -95,10 +95,11 @@ const parseMatch = async ({
             })
 
             const matchTime = new Date(liveMatch.startTime)
+
             const time = {
                 hours: (matchTime.getHours() + 5),
                 minutes: matchTime.getMinutes(),
-                date: matchTime
+                date: new Date()
             }
 
             time.string = `${time.hours}:${time.minutes}`
