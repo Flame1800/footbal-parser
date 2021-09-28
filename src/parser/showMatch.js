@@ -23,6 +23,7 @@ const showMatch = async ({
         setTimeout(() => {
             matchs.forEach(async currMatch => {
                 console.log(`Матч ${currMatch.link} в процессе обработки`)
+                await bot.sendMessage(chatId, `Матч подходит к концу! Ссылка: ${currMatch.link}`)
                 try {
                     const browser = await puppeteer.launch({
                         args: ['--no-sandbox', '--disable-setuid-sandbox'],
