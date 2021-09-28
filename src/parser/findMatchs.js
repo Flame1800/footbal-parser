@@ -16,6 +16,7 @@ const parseMatch = async ({
             slowMo: 100
         })
         const page = await browser.newPage()
+        page.setDefaultNavigationTimeout(0)
 
         await page.setViewport({
             width: 1400,
