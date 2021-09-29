@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 const fs = require('fs')
-const showMatch = require('./showMatchLite')
+const showMatch = require('./showMatch')
 
 const link = 'https://www.nowgoal3.com'
 const matchLiveLink = 'https://www.nowgoal3.com/match/live-'
