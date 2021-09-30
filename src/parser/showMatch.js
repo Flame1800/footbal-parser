@@ -21,12 +21,9 @@ const showMatch = async ({
 
     if (miliseconds >= 0) {
         setTimeout(() => {
-            matchs.forEach(async currMatch => {
-<<<<<<< HEAD
-=======
-                console.log(`Матч ${currMatch.link} в процессе обработки`)
-                await bot.sendMessage(chatId, `Матч подходит к концу! Ссылка: ${currMatch.link}`)
->>>>>>> 46089d5693ed6520e5b8295755d0b69ef3d056d5
+            matchs.forEach(async (currMatch, i) => {
+                console.log(`${i}. Матч ${currMatch.link} в процессе обработки`)
+                await bot.sendMessage(chatId, `${i}. Матч подходит к концу! Ссылка: ${currMatch.link}`)
                 try {
                     const browser = await puppeteer.launch({
                         args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -72,9 +69,9 @@ const showMatch = async ({
     
     
                     if (result.isProfit) {
-                        await bot.sendMessage(chatId, `!Выгодный матч! ${result.match.link}, ударов в створ: ${result.scores} `)
+                        await bot.sendMessage(chatId, `${i}. !Выгодный матч! ${result.match.link}, ударов в створ: ${result.scores} `)
                     } else {
-                        await bot.sendMessage(chatId, `!Неудачный матч! ${result.match.link}, ударов в створ: ${result.scores}`)
+                        await bot.sendMessage(chatId, `${i}. !Неудачный матч! ${result.match.link}, ударов в створ: ${result.scores}`)
                     }
                 } catch (error) {
                     console.log(error)
