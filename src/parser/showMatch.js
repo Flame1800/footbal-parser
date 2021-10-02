@@ -21,9 +21,8 @@ const showMatch = async ({
 
     if (miliseconds >= 0) {
         setTimeout(() => {
-            matchs.forEach(async (currMatch, i) => {
-                console.log(`${i}. Матч ${currMatch.link} в процессе обработки`)
-                await bot.sendMessage(chatId, `${i}. Матч подходит к концу! Ссылка: ${currMatch.link}`)
+            matchs.forEach(async (currMatch) => {
+                await bot.sendMessage(chatId, `${currMatch.i}. Матч подходит к концу! Ссылка: ${currMatch.link}`)
                 try {
                     const browser = await puppeteer.launch({
                         args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -69,9 +68,7 @@ const showMatch = async ({
     
     
                     if (result.isProfit) {
-                        await bot.sendMessage(chatId, `${i}. !Выгодный матч! ${result.match.link}, ударов в створ: ${result.scores} `)
-                    } else {
-                        await bot.sendMessage(chatId, `${i}. !Неудачный матч! ${result.match.link}, ударов в створ: ${result.scores}`)
+                        await bot.sendMessage(chatId, `${currMatch.i}. Выгодный матч! ${result.match.link}, ударов в створ: ${result.scores} `)
                     }
                 } catch (error) {
                     console.log(error)

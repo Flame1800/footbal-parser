@@ -50,7 +50,7 @@ const parseMatch = async ({
         const matchValues = []
 
         const legrhArr = filteredList.length
-        for (let i = 0; i < legrhArr; i++) {
+        for (let i = 0; i < 30; i++) {
             const link = `${matchLiveLink}${filteredList[i].id}`
             await page.goto(link, {
                 waitUntil: 'domcontentloaded'
@@ -108,7 +108,8 @@ const parseMatch = async ({
             matchValues.push({
                 link,
                 time,
-                values: liveMatch.redValues
+                values: liveMatch.redValues,
+                id: i
             })
         }
 
