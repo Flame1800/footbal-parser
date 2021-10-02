@@ -8,7 +8,7 @@ const showMatch = async ({
     const now = new Date()
     const match = matchs[0]
     const time = {
-        hours: match.time.hours - now.getHours(),
+        hours: match.time.hours - (now.getHours() + 2),
         minutes: match.time.minutes - now.getMinutes()
     }
 
