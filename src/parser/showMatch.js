@@ -22,7 +22,6 @@ const showMatch = async ({
     if (miliseconds >= 0) {
         setTimeout(() => {
             matchs.forEach(async (currMatch) => {
-                await bot.sendMessage(chatId, `${currMatch.id}. Матч подходит к концу! Ссылка: ${currMatch.link}`)
                 try {
                     const browser = await puppeteer.launch({
                         args: ['--no-sandbox', '--disable-setuid-sandbox'],
